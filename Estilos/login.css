@@ -1,19 +1,24 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f1f8ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    position: relative;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f1f8ff;
+  background-image: url('https://i.pinimg.com/originals/89/e3/7d/89e37d9611818e81f65d368d0350e5c7.jpg'); /* Asegúrate de poner la ruta correcta de la imagen */
+  background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+  background-position: center center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed; /* Hace que la imagen de fondo se quede fija mientras haces scroll */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+  position: relative;
+}
+
   .home-btn {
     position: absolute;
     top: 20px;
