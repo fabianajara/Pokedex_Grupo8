@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #F5F5F5;
+    color: #000000;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFDE00;
+    padding: 1rem 2rem;
+}
+
+/* Estilo para el avatar (imagen circular) */
+.avatar {
+    border-radius: 50%;
+    /* Hace la imagen circular */
+    object-fit: cover;
+    /* Asegura que la imagen se recorte bien si es rectangular */
+    width: 40px;
+    /* Ancho de la imagen */
+    height: 40px;
+    /* Alto de la imagen */
+}
+
+/* Estilo para separar la imagen del botón */
+.user-section {
+    display: flex;
+    align-items: center;
+}
+
+.user-section a {
+    display: flex;
+    align-items: center;
+}
+
+#logoutButton {
+    margin-left: 10px;
+    /* Separar el botón de la imagen */
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+    background: #FF0000;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #000000;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: white;
+    color: black;
+    position: relative;
+    z-index: 1;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 0;
+}
+
+.hero h1,
+.hero p {
+    z-index: 1;
+    position: relative;
+}
+
+.hero p {
+    font-weight: bold;
+    color: black;
+    margin-bottom: 0.8rem;
+    z-index: 1;
+    position: relative;
+}
+
+.hero .btn-cta {
+    display: inline-block;
+    background: #3B4CCA;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    margin-top: 0.3rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.3s;
+    z-index: 1;
+    position: relative;
+}
+
+.hero .btn-cta:hover {
+    background: #2A36A3;
+}
+
+.pokedex-highlights {
+    padding: 2rem 1rem;
+    background: #E3F2FD;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: #000000;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    width: 250px;
+    height: 350px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img {
+    width: 150px;
+    height: auto;
+    margin: 0 auto 1rem;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.news {
+    padding: 2rem 1rem;
+    background: #FFF9C4;
+    text-align: center;
+}
+
+.news-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.news-item {
+    background: white;
+    border: 1px solid #FFDE00;
+    border-radius: 10px;
+    width: 300px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h3 {
+    color: #3B4CCA;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
