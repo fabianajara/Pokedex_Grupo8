@@ -1,3 +1,4 @@
+// Código JavaScript para manejar el envío del formulario
 document.getElementById("registerForm").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevenir el envío del formulario
 
@@ -18,4 +19,3 @@ document.getElementById("registerForm").addEventListener("submit", function (eve
     })
     .catch(error => console.error('Error:', error));
 });
-csazdc
