@@ -14,7 +14,7 @@
 
 <body>
     <header class="header">
-        <img src="imgs/logo.png" alt="Pokémon Logo" class="logo" />
+        <img src="imgs/logo.png" alt="Pokémon Logo" class="logo">
         <nav>
             <!-- Botones de inicio de sesión y registro -->
             <a href="login.html" class="btn btn-primary" id="loginButton">Iniciar Sesión</a>
@@ -23,11 +23,14 @@
             <!-- Aquí se añadirá el nombre y la foto del usuario logueado -->
             <div id="userSection" class="d-flex align-items-center hidden">
                 <span id="userName" class="me-2"></span>
-                <img id="userImage" src="" alt="Avatar" class="avatar rounded-circle ms-2" width="30" height="30" />
-                <button id="logoutButton" type="button" class="btn btn-danger ms-2">
-                    Cerrar Sesión
-                </button>
+                <img id="userImage" src="" alt="Avatar" class="avatar rounded-circle ms-2" width="30" height="30">
+                <button id="logoutButton" type="button" class="btn btn-danger ms-2">Cerrar Sesión</button>
+                <!-- Botón de "Mis amigos", solo visible cuando el usuario esté logueado -->
+                <a href="amigos.html" id="friendsButton" class="btn btn-info ms-3 hidden">Mis Amigos</a>
             </div>
+
+            <!-- Botón adicional para ir a una nueva página (solo visible cuando el usuario esté logueado) -->
+            <a href="pokemones.html" id="pokemonesButton" class="btn btn-success ms-3 hidden">Pokemones</a>
         </nav>
     </header>
 
