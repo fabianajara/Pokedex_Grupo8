@@ -4,102 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="Estilos/index.css">
-    <title>Pokémon App</title>
+    <link rel="stylesheet" href="Estilos/login.css">
+    <!-- Incluir la fuente desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="imgs/Pokebola-pokeball-png-0.ico" type="image/x-icon">
+    <title>Iniciar Sesión</title>
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <div class="d-flex align-items-center me-auto"> <!-- Contenedor para logo y botón -->
-                    <!-- Botón adicional para ir a una nueva página -->
-                    <a href="pokemones.html" id="pokemonesButton" class="btn btn-success me-3 hidden">Pokemones</a>
-
-                    <!-- Logo de Pokémon -->
-                    <a href="#" class="navbar-brand">
-                        <img src="imgs/logo.png" alt="Pokémon Logo" class="logo">
-                    </a>
+    <a href="index.html" class="home-btn">Inicio</a>
+    <main class="login-container">
+        <div class="login-box">
+            <img src="imgs/logo.png" alt="Pokémon Logo" class="login-logo">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" name="username" required>
                 </div>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto"> <!-- Contenedor para elementos de usuario -->
-                        <!-- Botones de inicio de sesión y registro -->
-                        <li class="nav-item">
-                            <a href="login.html" class="btn btn-primary" id="loginButton">Iniciar Sesión</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="registrar.html" class="btn btn-primary" id="registerButton">Registrarse</a>
-                        </li>
-
-                        <!-- Aquí se añadirá el nombre y la foto del usuario logueado -->
-                        <li class="nav-item d-flex align-items-center hidden" id="userSection">
-                            <span id="userName" class="me-2"></span>
-                            <img id="userImage" src="" alt="Avatar" class="avatar rounded-circle ms-2" width="30"
-                                height="30">
-                            <button id="logoutButton" type="button" class="btn btn-danger ms-2">Cerrar Sesión</button>
-                        </li>
-                    </ul>
+                <div class="input-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
                 </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <h1>¡Bienvenido a la Pokédex!</h1>
-            <p>Explora, captura y domina el mundo Pokémon.</p>
-            <a href="login.html" class="btn-cta">Inicia tu Aventura</a>
-        </section>
-
-        <section class="pokedex-highlights">
-            <h2 class="section-title">Destacados de la Pokédex</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="imgs/pikachu.png" alt="Pikachu" class="card-img">
-                    <h3>Pikachu</h3>
-                    <p>Tipo: Eléctrico<br>Debilidad: Tierra</p>
-                </div>
-
-                <div class="card">
-                    <img src="imgs/charizard.png" alt="Charizard" class="card-img">
-                    <h3>Charizard</h3>
-                    <p>Tipo: Fuego/Volador<br>Debilidad: Agua, Eléctrico</p>
-                </div>
-
-                <div class="card">
-                    <img src="imgs/bulbasaur.png" alt="Bulbasaur" class="card-img">
-                    <h3>Bulbasaur</h3>
-                    <p>Tipo: Planta/Veneno<br>Debilidad: Fuego</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="news">
-            <h2 class="section-title">Últimas Actualizaciones</h2>
-            <div class="news-container">
-                <div class="news-item">
-                    <h3>¡Evento Especial!</h3>
-                    <p>Participa en la temporada de capturas legendarias. Disponible hasta el 31 de diciembre.</p>
-                </div>
-                <div class="news-item">
-                    <h3>Nuevos Pokémon</h3>
-                    <p>Agregamos 50 nuevas especies a la Pokédex. ¡Descúbrelos ahora!</p>
-                </div>
-            </div>
-        </section>
+                <button type="submit" class="btn">Entrar</button>
+            </form>
+            <p class="register-link">¿No tienes cuenta? <a href="registrar.html">Regístrate aquí</a></p>
+        </div>
     </main>
-
-    <footer>
-        <p>&copy; 2024 Pokémon App | Todos los derechos reservados</p>
-    </footer>
-
-    <script src="js/navbar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-+oYH0hZL1QZ8kHf4HqE6F0x9QeJp3sK8D5y+W9m4V4H0C7zY+VtZB5Z8l2M3F7N"
-        crossorigin="anonymous"></script>
+    <div id="error-message" style="display: none; color: red; text-align: center;"></div>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
