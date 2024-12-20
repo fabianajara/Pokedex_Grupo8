@@ -19,11 +19,14 @@
             <a href="registrar.html" class="btn btn-primary" id="registerButton">Registrarse</a>
 
             <!-- Aquí se añadirá el nombre y la foto del usuario logueado -->
-            <div id="userSection" class="d-flex align-items-center" style="display: none;">
+            <div id="userSection" class="d-flex align-items-center hidden">
                 <span id="userName" class="me-2"></span>
                 <img id="userImage" src="" alt="Avatar" class="avatar rounded-circle ms-2" width="30" height="30">
                 <button id="logoutButton" type="button" class="btn btn-danger ms-2">Cerrar Sesión</button>
             </div>
+
+            <!-- Botón adicional para ir a una nueva página (solo visible cuando el usuario esté logueado) -->
+            <a href="pokemones.html" id="pokemonesButton" class="btn btn-success ms-3 hidden">Pokemones</a>
         </nav>
     </header>
 

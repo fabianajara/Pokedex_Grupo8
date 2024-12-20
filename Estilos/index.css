@@ -13,6 +13,11 @@ body {
     padding: 1rem 2rem;
 }
 
+/* index.css */
+.hidden {
+    display: none !important;
+}
+
 /* Estilo para el avatar (imagen circular) */
 .avatar {
     border-radius: 50%;
