@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemones - CRUD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="icon" href="imgs/Pokebola-pokeball-png-0.ico" type="image/x-icon">
+    <link rel="stylesheet" href="Estilos/pokemones.css" />
+    <link rel="stylesheet" href="Estilos/index.css" />
+</head>
+
+<body>
+    <header class="header">
+        <img src="imgs/logo.png" alt="Pokémon Logo" class="logo" />
+        <nav>
+            <!-- Botones de inicio de sesión y registro -->
+            <a href="login.html" class="btn btn-primary" id="loginButton">Iniciar Sesión</a>
+            <a href="registrar.html" class="btn btn-primary" id="registerButton">Registrarse</a>
+
+            <!-- Aquí se añadirá el nombre y la foto del usuario logueado -->
+            <div id="userSection" class="d-flex align-items-center hidden">
+                <span id="userName" class="me-2"></span>
+                <img id="userImage" src="" alt="Avatar" class="avatar rounded-circle ms-2" width="30" height="30" />
+                <button id="logoutButton" type="button" class="btn btn-danger ms-2">
+                    Cerrar Sesión
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="text-center">Gestión de Pokémon</h1>
+        </div>
+
+        <!-- Mostrar Pokemones -->
+        <section class="mt-4">
+            <h2>Lista de Pokémon</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Peso</th>
+                        <th>Tamaño</th>
+                        <th>Foto</th>
+                    </tr>
+                </thead>
+                <tbody id="pokemonesContainer">
+                    <!-- Los Pokémon se cargarán aquí por JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Modal para agregar un nuevo Pokémon -->
+        <div class="modal fade" id="agregarPokemonModal" tabindex="-1" aria-labelledby="agregarPokemonModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="agregarPokemonModalLabel">
+                            Agregar Pokémon
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Formulario de agregar Pokémon -->
+                        <form id="agregarPokemonForm" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" id="nombre" class="form-control" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="tipo" class="form-label">Tipo</label>
+                                <input type="text" id="tipo" class="form-control" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="peso" class="form-label">Peso</label>
+                                <input type="number" id="peso" class="form-control" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="tamano" class="form-label">Tamaño</label>
+                                <input type="text" id="tamano" class="form-control" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="foto" class="form-label">Foto</label>
+                                <input type="file" id="foto" class="form-control" required />
+                            </div>
+                            <button type="submit" class="btn btn-success">
+                                Agregar Pokémon
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para editar Pokémon -->
+        <div class="modal" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="modalEditarLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalEditarLabel">Editar Pokémon</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formEditarPokemon">
+                            <input type="hidden" id="idPokemon" name="id"> <!-- ID del Pokémon -->
+                            <div class="form-group">
+                                <label for="nombrePokemon">Nombre</label>
+                                <input type="text" class="form-control" id="nombrePokemon" name="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="tipoPokemon">Tipo</label>
+                                <input type="text" class="form-control" id="tipoPokemon" name="tipo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pesoPokemon">Peso</label>
+                                <input type="number" class="form-control" id="pesoPokemon" name="peso" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="tamanoPokemon">Tamaño</label>
+                                <input type="text" class="form-control" id="tamanoPokemon" name="tamano" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2024 Pokémon App | Todos los derechos reservados</p>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/pokemones.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+
+</html>

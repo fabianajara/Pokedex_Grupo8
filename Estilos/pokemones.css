@@ -1,0 +1,138 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .logo {
+    width: 100px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+/* Estilo principal de la página */
+main {
+    margin: 20px;
+}
+
+/* Contenedor para mostrar los Pokémon */
+.pokemon-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estilo de cada tarjeta de Pokémon */
+.pokemon-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.pokemon-card:hover {
+    transform: scale(1.05);
+}
+
+.pokemon-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.pokemon-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.pokemon-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Botones de acción (editar, eliminar) */
+.pokemon-card .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.pokemon-card .btn:hover {
+    background-color: #0056b3;
+}
+
+.pokemon-card .btn-danger {
+    background-color: #dc3545;
+}
+
+.pokemon-card .btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Estilos para el formulario de agregar Pokémon */
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+form input,
+form button {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+form .form-control {
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Mensaje de error al agregar Pokémon */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
