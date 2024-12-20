@@ -13,6 +13,29 @@ body {
     padding: 1rem 2rem;
 }
 
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    /* Alinea verticalmente los elementos */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 1rem;
+    /* Espacio entre los elementos */
+}
+
+#pokemonesButton {
+    margin-right: 10px;
+    /* Espacio entre el botón y el logo */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    /* Alinea verticalmente el logo */
+}
+
+
 /* index.css */
 .hidden {
     display: none !important;
