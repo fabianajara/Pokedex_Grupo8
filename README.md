@@ -52,5 +52,5 @@ La aplicación cuenta con distintos roles, cada uno con permisos específicos:
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/pokedex-app.git
+   git clone https://github.com/tu-usuario/Pokedex_Grupo8.git
    cd pokedex-app
