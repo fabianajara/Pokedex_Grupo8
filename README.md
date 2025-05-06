@@ -1,6 +1,6 @@
 # 🧢 Pokédex App
 
-Una aplicación web interactiva de Pokédex desarrollada con **PHP**, **HTML**, **CSS** y **Bootstrap**, donde los usuarios pueden crear perfiles, agregar Pokémon a sus equipos y conectarse con otros entrenadores. La app incluye control de acceso por roles, lo que permite mostrar distintas funcionalidades y pantallas según el tipo de usuario.
+Una aplicación web interactiva de Pokédex desarrollada con **PHP**, **HTML**, **CSS**, **JS** y **Bootstrap**, donde los usuarios pueden crear perfiles, agregar Pokémon a sus equipos y conectarse con otros entrenadores. La app incluye control de acceso por roles, lo que permite mostrar distintas funcionalidades y pantallas según el tipo de usuario.
 
 ## 📽️ Vista previa
 
@@ -43,7 +43,8 @@ La aplicación cuenta con distintos roles, cada uno con permisos específicos:
 - **HTML5** – Maquetación de la estructura de la aplicación  
 - **CSS3** – Estilos personalizados  
 - **Bootstrap** – Diseño responsive y componentes visuales  
-- **PHP** – Lógica del servidor y manejo de roles/sesiones  
+- **PHP** – Lógica del servidor y manejo de roles/sesiones
+- **JavaScript** – Funcionalidad e interactividad del lado del cliente  
 - **MySQL** – Base de datos para usuarios, roles y Pokémon  
 
 ---
